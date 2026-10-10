@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Atores e Atrizes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Atores e Atrizes</h1>
+    <p class="subtitulo">Dados via TVmaze. Digite um nome para filtrar os cards.</p>
+
+    <!-- oninput dispara a cada tecla; this.value é o texto atual do campo -->
+    <input
+      type="text"
+      id="busca"
+      placeholder="Buscar por nome..."
+      oninput="filtrar(this.value)"
+      autocomplete="off"
+    >
+    <p id="contador" class="contador"></p>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <!-- dados.js precisa carregar antes de script.js: script.js usa o array `atores` -->
+  <script src="dados.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
