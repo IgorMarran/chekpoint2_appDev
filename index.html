@@ -12,6 +12,7 @@
     <p class="subtitulo">Dados via TVmaze. Digite um nome para filtrar os cards.</p>
 
     <!-- oninput dispara a cada tecla; this.value é o texto atual do campo -->
+    <label for="busca" class="visualmente-oculto">Buscar por nome</label>
     <input
       type="text"
       id="busca"
@@ -19,7 +20,7 @@
       oninput="filtrar(this.value)"
       autocomplete="off"
     >
-    <p id="contador" class="contador"></p>
+    <p id="contador" class="contador" aria-live="polite"></p>
   </header>
 
   <main>

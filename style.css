@@ -101,3 +101,13 @@ main {
   color: #a0a0aa;
   padding: 40px 0;
 }
+
+/* Label só pra leitor de tela: some da tela, continua no DOM. */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
